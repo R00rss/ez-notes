@@ -1,10 +1,10 @@
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 import uvicorn
-from database.sql_app.database import SessionLocal, engine
-import database.sql_app.crud as crud
-import database.sql_app.models as models
-import database.sql_app.schemas as schemas
+from database.database import SessionLocal, engine
+import database.crud as crud
+import database.models as models
+import database.schemas as schemas
 
 app = FastAPI(
     # ssl_keyfile="./ssl_certificado/private.key",
