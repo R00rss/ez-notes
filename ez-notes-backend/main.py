@@ -1,5 +1,10 @@
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI, HTTPException
+from sqlalchemy.orm import Session
 import uvicorn
+from database.sql_app.database import SessionLocal, engine
+import database.sql_app.crud as crud
+import database.sql_app.models as models
+import database.sql_app.schemas as schemas
 
 app = FastAPI(
     # ssl_keyfile="./ssl_certificado/private.key",
@@ -7,9 +12,23 @@ app = FastAPI(
 )
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+
+@app.get("/users/", response_model=list[schemas.User])
+# @app.get("/users/")
+def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    # users = crud.get_users(db, skip=skip, limit=limit)
+    # return users
+    users = crud.get_users(db, skip=skip, limit=limit)
+    print(users)
+    print(type(users[0]))
+    return users
 
 
 if __name__ == "__main__":
