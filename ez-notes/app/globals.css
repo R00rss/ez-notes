@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color-85: #75135d85;
+  --secondary-color-85: #3278db85;
+  --tertiary-color-85: #67e8f985;
+  --primary-color: #75135d;
+  --secondary-color: #3278db;
+  --tertiary-color: #67e8f9;
+  --primary-gray: #b0dee1;
+  --secondary-gray: #8dcacf;
+  --tertiary-gray: #65afbc;
+  --quaternary-gray: #488197;
+}
+
 *,
 *::before,
 *::after {
@@ -52,7 +65,6 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;

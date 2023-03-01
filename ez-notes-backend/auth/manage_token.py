@@ -8,36 +8,22 @@ ALGORITHM = config("ALGORITHM")
 
 def generate_access_token(
     data: dict, expires_delta: timedelta = timedelta(minutes=6000)
-):
-    expire = datetime.utcnow() + expires_delta
-    token_data = {**data, "exp": expire}
+) -> str | None:
     try:
-        return {
-            "payload": {
-                "encoded_jwt": jwt.encode(token_data, SECRET_KEY, algorithm=ALGORITHM)
-            },
-            "success": True,
-        }
-    except Exception as e:
-        return {
-            "exception": e,
-            "success": False,
-        }
+        expire = datetime.utcnow() + expires_delta
+        token_data = {**data, "exp": expire}
+        return jwt.encode(token_data, SECRET_KEY, algorithm=ALGORITHM)
+    except (Exception, jwt.DecodeError) as e:
+        print(e)
+        return None
 
 
-def decode_access_token(token: str):
+def decode_access_token(token: str) -> (dict | str) | None:
     try:
-        return {
-            "payload": {
-                "decoded_jwt": jwt.decode(token, SECRET_KEY, algorithms=ALGORITHM)
-            },
-            "success": True,
-        }
+        return jwt.decode(token, SECRET_KEY, algorithms=ALGORITHM)
     except Exception as e:
-        return {
-            "exception": e,
-            "success": False,
-        }
+        print(e)
+        return None
 
 
 # user_data = {"username": "admin", "password": "admin"}

@@ -29,6 +29,18 @@ def get_collections(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.Collection).offset(skip).limit(limit).all()
 
 
+def get_collections_by_id_user(
+    db: Session, skip: int = 0, limit: int = 100, id_user: int = 0
+):
+    return (
+        db.query(models.Collection)
+        .filter(models.Collection.user_id == id_user)
+        .offset(skip)
+        .limit(limit)
+        .all()
+    )
+
+
 def create_user_collection(db: Session, item: schemas.CollectionCreate, user_id: int):
     db_item = models.Item(**item.dict(), user_id=user_id)
     db.add(db_item)
