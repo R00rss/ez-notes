@@ -9,7 +9,7 @@
       var(--primary-color-85),
       var(--tertiary-color-85)
     ),
-    url("../../assets/images/login/bg-login3.png");
+    url("../../../assets/images/login/bg-login3.png");
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;

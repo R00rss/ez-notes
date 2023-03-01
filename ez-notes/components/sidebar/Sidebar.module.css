@@ -38,18 +38,18 @@
   color: #e2e3ea;
 }
 .selected_menu_item {
-  background-color: #4e0258;
+  background-color: transparent;
   border-top-left-radius: 0.75rem /* 12px */;
   border-bottom-left-radius: 0.75rem /* 12px */;
   color: #1e293b;
 }
 .before_selected_menu_item {
-  background-color: transparent;
+  background-color: #4e0258;
   border-top-left-radius: 0.75rem /* 12px */;
   border-bottom-left-radius: 0.75rem /* 12px */;
 }
 .after_selected_menu_item {
-  background-color: transparent;
+  background-color: #4e0258;
   border-radius: 1rem /* 16px */;
   border-top-right-radius: 0px;
 }

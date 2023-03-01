@@ -1,31 +1,11 @@
-"use client";
-import { get_token } from "@/functions/globals";
-import { Collection } from "@/types/collection";
-import { useEffect, useState } from "react";
+import { remove_token } from "@/functions/globals";
+import { useContext, useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import burger_icon from "@/assets/icons/sidebar/png/menu-burger.png";
 import cross_icon from "@/assets/icons/sidebar/png/cross.png";
-import home_icon from "@/assets/icons/sidebar/png/house.png";
-import users_icon from "@/assets/icons/sidebar/png/users.png";
-import message_icon from "@/assets/icons/sidebar/png/comments.png";
-import settings_icon from "@/assets/icons/sidebar/png/settings.png";
-import help_icon from "@/assets/icons/sidebar/png/info.png";
 import exit_icon from "@/assets/icons/sidebar/png/door-open.png";
-
-import { MenuCollections } from "../menu_collections/MenuCollections";
-import styles from "./Sidebar.module.css";
-async function getCollections(current_token: string | null) {
-  if (current_token === null) return console.log("No token found");
-  const res = await fetch("http://localhost:2000/api/collections_by_id_user", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${current_token}`,
-    },
-  });
-  const data = await res.json();
-  return data;
-}
+import { useRouter } from "next/navigation";
+import { SidebarMenuContext, SidebarMenuContextType } from "./ContainerSidebar";
 
 interface menu_item {
   id: number;
@@ -34,69 +14,42 @@ interface menu_item {
   alt: string;
   selected: boolean;
 }
-const menu_items_default: menu_item[] = [
-  { id: 1, name: "Inicio", icon: home_icon, alt: "home", selected: true },
-  { id: 2, name: "Perfil", icon: users_icon, alt: "users", selected: false },
-  {
-    id: 3,
-    name: "Mensajes",
-    icon: message_icon,
-    alt: "message",
-    selected: false,
-  },
-  {
-    id: 4,
-    name: "Configuraciones",
-    icon: settings_icon,
-    alt: "settings",
-    selected: false,
-  },
-  { id: 5, name: "Ayuda", icon: help_icon, alt: "help", selected: false },
-  { id: 6, name: "Salir", icon: exit_icon, alt: "exit", selected: false },
-];
 
 export default function Sidebar() {
-  const [collections, set_collections] = useState<[Collection] | null>(null);
+  const { sidebar_menu, set_sidebar_menu } =
+    useContext<SidebarMenuContextType>(SidebarMenuContext);
   const [close_menu, set_close_menu] = useState<Boolean>(false);
-  const [menu_items, set_menu_items] =
-    useState<menu_item[]>(menu_items_default);
   const [selected_item, set_selected_item] = useState<menu_item | null>(null);
+  const router = useRouter();
 
-  useEffect(() => {
-    const token = get_token();
-    console.log(token);
-    if (token) {
-      getCollections(token).then((data) => {
-        set_collections(data);
-      });
-    }
-    return () => {};
-  }, []);
+  function handle_exit() {
+    console.log("exit");
+    remove_token();
+    router.push("/login");
+  }
 
-  function get_selected_item(menu_items: menu_item[]): menu_item | undefined {
-    const selected_item = menu_items.find((item) => item.selected);
+  function get_selected_item(sidebar_menu: menu_item[]): menu_item | undefined {
+    const selected_item = sidebar_menu.find((item) => item.selected);
     return selected_item;
   }
 
   function handle_change_option_menu(id: number): void {
-    set_menu_items(
-      menu_items.map((item_aux: menu_item) => {
+    set_sidebar_menu(
+      sidebar_menu.map((item_aux: menu_item) => {
         return { ...item_aux, selected: item_aux.id === id };
       })
     );
   }
   useEffect(() => {
-    if (menu_items) {
-      const aux_selected_item = get_selected_item(menu_items);
+    if (sidebar_menu) {
+      const aux_selected_item = get_selected_item(sidebar_menu);
       if (aux_selected_item) set_selected_item(aux_selected_item);
     }
-  }, [menu_items]);
-  useEffect(() => {
-    console.log(selected_item);
-  }, [selected_item]);
+  }, [sidebar_menu]);
 
   return (
     <div className={` bg-[#4e0258] ${close_menu ? "w-[70px]" : "w-[300px]"}`}>
+      {/* <div className={`flex flex-col justify-between pb-2 bg-[#4e0258] ${close_menu ? "w-[70px]" : "w-[300px]"}`}> */}
       <ul className="flex flex-col ml-3">
         <li
           onClick={() => {
@@ -118,7 +71,7 @@ export default function Sidebar() {
             </div>
           </div>
         </li>
-        {menu_items.map((item: menu_item, key: number) => {
+        {sidebar_menu.map((item: menu_item, key: number) => {
           if (item.selected) {
             return (
               <li
@@ -169,15 +122,33 @@ export default function Sidebar() {
             );
           }
         })}
+        <li className="bg-[#e2e3ea]">
+          <div
+            className={`flex gap-5 justify-end items-center py-2 px-2 ${
+              selected_item && selected_item.id === sidebar_menu.length
+                ? "rounded-tr-xl"
+                : ""
+            } bg-[#4e0258] `}
+          ></div>
+        </li>
       </ul>
-      <div className="bg-[#e2e3ea]">
+
+      <div
+        onClick={() => handle_exit()}
+        className={`group mx-2 cursor-pointer`}
+      >
         <div
-          className={`flex gap-5 justify-end items-center py-2 px-2 ${
-            selected_item && selected_item.id === menu_items.length
-              ? "rounded-tr-xl"
-              : ""
-          } bg-[#4e0258] `}
-        ></div>
+          className={`bg-[var(--tertiary-color)] text-[var(--primary-color)] hover:text-[var(--tertiary-color)] border-2 border-transparent group-hover:border-[var(--tertiary-color)] group-hover:bg-[#4e0258] flex flex-row gap-5 ${
+            close_menu ? "justify-center" : "justify-start"
+          } items-center py-3 px-2 rounded-xl`}
+        >
+          <Image
+            className="h-5 w-5 filter invert-[0.5] group-hover:invert-[1]"
+            src={exit_icon}
+            alt="exit icon"
+          />
+          {!close_menu && <p>Salir</p>}
+        </div>
       </div>
     </div>
   );
