@@ -48,7 +48,8 @@ export default function Login() {
   }, [cursor_pos]);
 
   async function send_credentials(credentials: credentials_to_send) {
-    return await fetch("http://localhost:2000/api/login", {
+    // return await fetch("http://localhost:2000/api/login", {
+    return await fetch("/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -137,16 +138,16 @@ export default function Login() {
   // }
   return (
     <div
-      className={`${style.bg_img_login_card} bg-black flex justify-center items-center h-[100dvh] relative`}
+      className={`${style.bg_img_login_card} bg-black flex justify-center items-center h-[100dvh] relative overflow-hidden`}
     >
       <div
         id="container_login"
-        className={`${style.container_login} bg-slate-900/80 w-[min(500px,80%)] aspect-[9/16] max-h-[min(700px,90%)] justify-evenly flex flex-col items-center rounded-2xl relative`}
+        className={`${style.container_login} ${style.login_container_animation} bg-slate-900/80 w-[min(500px,80%)] aspect-[9/16] max-h-[min(700px,90%)] justify-evenly flex flex-col items-center rounded-2xl relative`}
       >
         <h1 className="text-[clamp(20px,10vw,60px)] font-extralight italic text-[#e8fffc]">
           EZ notes
         </h1>
-        <section className="text-[#e8fffc] flex justify-center items-center flex-col bg-gradient-to-b bg-[#00000000] w-[450px] rounded-xl gap-6">
+        <section className="text-[#e8fffc] flex justify-center items-center flex-col bg-gradient-to-b bg-[#00000000] w-[min(450px,100%)] rounded-xl gap-6">
           {/* <h1 className="text-[clamp(13px,7vw,40px)] font-extralight">
             Bienvenido
           </h1> */}
@@ -219,6 +220,14 @@ export default function Login() {
             </button>
           </form>
         </section>
+      </div>
+      <div className={`absolute bottom-[-2px] left-0 h-[200px] w-full`}>
+        <div
+          className={`${style.wave} ${style.wave1} ${style.animation_move_x}`}
+        ></div>
+        <div
+          className={`${style.wave} ${style.wave2} ${style.animation_move_x2}`}
+        ></div>
       </div>
     </div>
   );

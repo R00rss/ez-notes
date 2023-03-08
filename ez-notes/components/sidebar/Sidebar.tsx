@@ -3,9 +3,11 @@ import { useContext, useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import burger_icon from "@/assets/icons/sidebar/png/menu-burger.png";
 import cross_icon from "@/assets/icons/sidebar/png/cross.png";
+import minus_icon from "@/assets/icons/sidebar/png/minus.png";
 import exit_icon from "@/assets/icons/sidebar/png/door-open.png";
 import { useRouter } from "next/navigation";
 import { SidebarMenuContext, SidebarMenuContextType } from "./ContainerSidebar";
+import styles from "./Sidebar.module.css";
 
 interface menu_item {
   id: number;
@@ -41,6 +43,12 @@ export default function Sidebar() {
     );
   }
   useEffect(() => {
+    const current_width_screen = window.innerWidth;
+    if (current_width_screen < 768) {
+      set_close_menu(true);
+    }
+  }, []);
+  useEffect(() => {
     if (sidebar_menu) {
       const aux_selected_item = get_selected_item(sidebar_menu);
       if (aux_selected_item) set_selected_item(aux_selected_item);
@@ -48,9 +56,14 @@ export default function Sidebar() {
   }, [sidebar_menu]);
 
   return (
-    <div className={` bg-[#4e0258] ${close_menu ? "w-[70px]" : "w-[300px]"}`}>
-      {/* <div className={`flex flex-col justify-between pb-2 bg-[#4e0258] ${close_menu ? "w-[70px]" : "w-[300px]"}`}> */}
-      <ul className="flex flex-col ml-3">
+    <div
+      className={`h-[100dvh] duration-[450ms] bg-[#4e0258] ${
+        close_menu
+          ? "w-[70px]"
+          : "w-full xs:w-[min(100%,200px)] lg:w-[200px] xl:w-[240px] 2xl:w-[280px]"
+      }`}
+    >
+      <ul className="flex flex-col ml-3 text-xs lg:text-sm 2xl:text-base">
         <li
           onClick={() => {
             set_close_menu((prev) => !prev);
@@ -65,7 +78,8 @@ export default function Sidebar() {
             <div className=" bg-[var(--tertiary-color)] border-2 border-transparent group-hover:border-[var(--tertiary-color)] group-hover:bg-transparent rounded-md h-9 w-9 p-2">
               <Image
                 className="filter group-hover:invert-[1]"
-                src={close_menu ? burger_icon : cross_icon}
+                // src={close_menu ? burger_icon : cross_icon}
+                src={close_menu ? burger_icon : minus_icon}
                 alt="exit_icon"
               />
             </div>
@@ -77,15 +91,25 @@ export default function Sidebar() {
               <li
                 key={item.id}
                 onClick={() => handle_change_option_menu(item.id)}
-                className="bg-[#e2e3ea] rounded-l-xl cursor-pointer"
+                className="bg-[#e2e3ea] rounded-none rounded-l-xl cursor-pointer relative"
               >
                 <div
-                  className={`flex flex-row gap-5 ${
-                    close_menu ? "justify-center" : "justify-start"
-                  } items-center py-3 px-2 rounded-xl text-slate-800`}
+                  className={`flex flex-row duration-300 ${
+                    close_menu
+                      ? "justify-center left-[-2px]"
+                      : "gap-5 justify-start left-[-0px]"
+                  } relative shadow-[-4px_-1px_1px_1px_#c0c2c2]  bg-[#e2e3ea]  ease-in-out items-center py-2 px-1 lg:py-3 lg:px-2 rounded-l-xl text-slate-800`}
                 >
                   <Image className="h-5 w-5" src={item.icon} alt={item.alt} />
-                  {!close_menu && <p>{item.name}</p>}
+                  <p
+                    className={`${
+                      !close_menu
+                        ? `${styles.appear_button}`
+                        : `${styles.disappear_button}`
+                    }`}
+                  >
+                    {item.name}
+                  </p>
                 </div>
               </li>
             );
@@ -98,7 +122,7 @@ export default function Sidebar() {
               <li
                 key={item.id}
                 onClick={() => handle_change_option_menu(item.id)}
-                className={`group bg-[#e2e3ea] rounded-3xl cursor-pointer ${
+                className={`group bg-[#e2e3ea] rounded-full cursor-pointer relative ${
                   item.id == aux_id + 1
                     ? "rounded-tr-none"
                     : item.id == aux_id - 1
@@ -107,16 +131,26 @@ export default function Sidebar() {
                 }`}
               >
                 <div
-                  className={`group-hover:bg-[var(--tertiary-color)] group-hover:text-[var(--primary-color)] group-hover:rounded-r-none flex flex-row gap-5 ${
-                    close_menu ? "justify-center" : "justify-start"
-                  } items-center py-3 px-2 rounded-xl text-[#e2e3ea] bg-[#4e0258]`}
+                  // className={`duration-100 ease-in-out left-[-1px] group-hover:bg-[var(--tertiary-color)] group-hover:text-[var(--primary-color)] group-hover:rounded-r-none flex flex-row ${
+                    className={`duration-100 ease-in-out left-[-1px] group-hover:bg-gradient-to-r group-hover:from-cyan-200 group-hover:via-cyan-100 group-hover:to-[#e2e3ea] group-hover:text-[var(--primary-color)] group-hover:rounded-r-none flex flex-row ${
+                    close_menu ? "justify-center" : "gap-5 justify-start"
+                  } items-center py-2 px-1 lg:py-3 lg:px-2  rounded-xl text-[#e2e3ea] bg-[#4e0258]`}
                 >
                   <Image
                     className="h-5 w-5 filter group-hover:invert-[0.5] invert-[1]"
                     src={item.icon}
                     alt={item.alt}
                   />
-                  {!close_menu && <p>{item.name}</p>}
+
+                  <p
+                    className={`${
+                      !close_menu
+                        ? `${styles.appear_button}`
+                        : `${styles.disappear_button}`
+                    }`}
+                  >
+                    {item.name}
+                  </p>
                 </div>
               </li>
             );
@@ -135,19 +169,27 @@ export default function Sidebar() {
 
       <div
         onClick={() => handle_exit()}
-        className={`group mx-2 cursor-pointer`}
+        className={`group mx-2 cursor-pointer text-xs lg:text-sm 2xl:text-base`}
       >
         <div
-          className={`bg-[var(--tertiary-color)] text-[var(--primary-color)] hover:text-[var(--tertiary-color)] border-2 border-transparent group-hover:border-[var(--tertiary-color)] group-hover:bg-[#4e0258] flex flex-row gap-5 ${
-            close_menu ? "justify-center" : "justify-start"
-          } items-center py-3 px-2 rounded-xl`}
+          className={`ease-in-out  duration-300 bg-[var(--tertiary-color)] text-[var(--primary-color)] hover:text-[var(--tertiary-color)] border-2 border-transparent group-hover:border-[var(--tertiary-color)] group-hover:bg-[#4e0258] flex flex-row ${
+            close_menu ? "justify-center" : "gap-5 justify-start"
+          } items-center py-2 px-1 lg:py-3 lg:px-2 rounded-xl`}
         >
           <Image
             className="h-5 w-5 filter invert-[0.5] group-hover:invert-[1]"
             src={exit_icon}
             alt="exit icon"
           />
-          {!close_menu && <p>Salir</p>}
+          <p
+            className={`${
+              !close_menu
+                ? `${styles.appear_button}`
+                : `${styles.disappear_button}`
+            }`}
+          >
+            Salir
+          </p>
         </div>
       </div>
     </div>

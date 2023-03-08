@@ -6,7 +6,12 @@ from fastapi import (
     Request,
     Body,
     Header,
+    UploadFile,
+    File,
+    Form,
 )
+import os
+from os import path
 from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 import uvicorn
@@ -18,9 +23,13 @@ import schemas as schemas
 import auth.manage_token as token
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
+import functions.manage_files as manage_files
 
 origins = [
-    "http://localhost",
+    # all origins
+    "*",
+    # "http://172.10.19.55",
+    # "http://172.10.19.52",
     "http://localhost:7000",
 ]
 
@@ -36,6 +45,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+pathname = path.dirname(path.realpath(__file__))
 
 
 async def get_token_header(Authorization: Optional[str] = Header(None)):
@@ -53,21 +64,221 @@ def get_db():
         db.close()
 
 
-@app.get("/users", response_model=list[schemasDB.User])
+@app.get("/api/users", response_model=list[schemasDB.User])
 def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = crud.get_users(db, skip=skip, limit=limit)
     return users
 
 
-@app.post("/api/collections_by_id_user", response_model=list[schemasDB.Collection])
-def collections_by_id_user(
+@app.post(
+    "/api/collection",
+    response_model=schemasDB.Collection,
+)
+def collections(
+    db: Session = Depends(get_db),
+    authorization_token: str = Depends(get_token_header),
+    collection: schemasDB.CollectionCreate = Body(...),
+):
+    print("authorization_token", authorization_token)
+    try:
+        if authorization_token == None:
+            raise HTTPException(status_code=400, detail="No session found")
+        current_user: schemas.UserToken = token.decode_access_token(authorization_token)
+        if current_user == None:  # el token es valido
+            raise HTTPException(status_code=404, detail="No session found")
+        if current_user["status"] == 1:
+            collection = crud.add_collection(
+                db,
+                collection=collection,
+                user_id=current_user["id"],
+            )
+            return collection
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
+
+
+# @app.post("/api/image", response_model=schemasDB.Image)
+@app.post("/api/image")
+async def upload_file(
+    db: Session = Depends(get_db),
+    authorization_token: str = Depends(get_token_header),
+    file: UploadFile = File(...),
+    id_note: str = Form(...),
+):
+    try:
+        # GET CURRENT PATH using path
+        # import os
+
+        # print("file", file)
+
+        if authorization_token == None:
+            raise HTTPException(status_code=400, detail="No session found")
+        current_user: schemas.UserToken = token.decode_access_token(authorization_token)
+        if current_user == None:  # el token es valido
+            raise HTTPException(status_code=404, detail="No session found")
+        if current_user["status"] == 1:
+            contents = await file.read()
+            pathToSave = path.join(
+                pathname,
+                "files",
+                "images",
+                f"note_{id_note}",
+                file.filename,
+            )
+            if not path.exists(os.path.dirname(pathToSave)):
+                os.makedirs(os.path.dirname(pathToSave))
+            aux_file = open(pathToSave, "wb")
+            aux_file.write(contents)
+            aux_file.close()
+            aux_image = schemasDB.ImageCreate(
+                note_id=id_note, path_file=pathToSave, name=file.filename
+            )
+
+            image = crud.add_image(db, image=aux_image)
+            return image
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
+
+
+@app.put(
+    "/api/collection",
+    response_model=schemasDB.Collection,
+)
+def collection(
+    db: Session = Depends(get_db),
+    authorization_token: str = Depends(get_token_header),
+    collection: schemasDB.Collection = Body(...),
+):
+    print("authorization_token", authorization_token)
+    try:
+        if authorization_token == None:
+            raise HTTPException(status_code=400, detail="No session found")
+        current_user: schemas.UserToken = token.decode_access_token(authorization_token)
+        if current_user == None:  # el token es valido
+            raise HTTPException(status_code=404, detail="No session found")
+        if current_user["status"] == 1:
+            collection_ = crud.update_collection(db, collection=collection)
+            return collection_
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
+
+
+@app.post(
+    "/api/note",
+    response_model=schemasDB.Note,
+)
+def note(
+    db: Session = Depends(get_db),
+    authorization_token: str = Depends(get_token_header),
+    note: schemasDB.NoteCreate = Body(...),
+):
+    print("authorization_token", authorization_token)
+    try:
+        if authorization_token == None:
+            raise HTTPException(status_code=400, detail="No session found")
+        current_user: schemas.UserToken = token.decode_access_token(authorization_token)
+        if current_user == None:  # el token es valido
+            raise HTTPException(status_code=404, detail="No session found")
+        if current_user["status"] == 1:
+            note_ = crud.add_note(db, note=note)
+            return note_
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
+
+
+@app.put(
+    "/api/note",
+    response_model=schemasDB.Note,
+)
+def note(
+    db: Session = Depends(get_db),
+    authorization_token: str = Depends(get_token_header),
+    note: schemasDB.Note = Body(...),
+):
+    print("authorization_token", authorization_token)
+    try:
+        if authorization_token == None:
+            raise HTTPException(status_code=400, detail="No session found")
+        current_user: schemas.UserToken = token.decode_access_token(authorization_token)
+        if current_user == None:  # el token es valido
+            raise HTTPException(status_code=404, detail="No session found")
+        if current_user["status"] == 1:
+            note_ = crud.update_note(db, note=note)
+            return note_
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
+
+
+@app.delete("/api/note")
+def note(
+    db: Session = Depends(get_db),
+    authorization_token: str = Depends(get_token_header),
+    note: schemasDB.Note = Body(...),
+):
+    print("authorization_token", authorization_token)
+    try:
+        if authorization_token == None:
+            raise HTTPException(status_code=400, detail="No session found")
+        current_user: schemas.UserToken = token.decode_access_token(authorization_token)
+        if current_user == None:  # el token es valido
+            raise HTTPException(status_code=404, detail="No session found")
+        if current_user["status"] == 1:
+            flag = crud.delete_note_by_id(db, id_note=note.id)
+            if flag:
+                return {"message": "note deleted"}
+            raise HTTPException(status_code=404, detail="note not found")
+        raise HTTPException(status_code=403, detail="usuario no autorizado")
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
+
+
+@app.get("/api/notes", response_model=list[schemasDB.Note])
+def notes(
+    id_collection: int,
     skip: int = 0,
     limit: int = 100,
     db: Session = Depends(get_db),
     authorization_token: str = Depends(get_token_header),
 ):
-    print("authorization_token", authorization_token)
     try:
+        # return {"id_collection": id_collection}
+
+        if authorization_token == None:
+            raise HTTPException(status_code=400, detail="No session found")
+        current_user: schemas.UserToken = token.decode_access_token(authorization_token)
+        if current_user == None:  # el token es valido
+            raise HTTPException(status_code=404, detail="No session found")
+        if current_user["status"] == 1:
+            notes_ = crud.get_notes_by_id_collection(
+                db, skip=skip, limit=limit, id_collection=id_collection
+            )
+            return notes_
+        raise HTTPException(status_code=403, detail="usuario no autorizado")
+
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
+
+
+@app.get("/api/collections", response_model=list[schemasDB.Collection])
+def collections(
+    skip: int = 0,
+    limit: int = 100,
+    db: Session = Depends(get_db),
+    authorization_token: str = Depends(get_token_header),
+):
+    # print("authorization_token", authorization_token)
+    try:
+        # collections = crud.get_collections_by_id_user(
+        #     db, skip=skip, limit=limit, id_user=1
+        # )
+        # return collections
         if authorization_token == None:
             raise HTTPException(status_code=400, detail="No session found")
         current_user: schemas.UserToken = token.decode_access_token(authorization_token)
@@ -79,6 +290,31 @@ def collections_by_id_user(
             )
             return collections
     except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
+
+
+@app.delete("/api/collection")
+def note(
+    db: Session = Depends(get_db),
+    authorization_token: str = Depends(get_token_header),
+    collection: schemasDB.Collection = Body(...),
+):
+    print("authorization_token", authorization_token)
+    try:
+        if authorization_token == None:
+            raise HTTPException(status_code=400, detail="No session found")
+        current_user: schemas.UserToken = token.decode_access_token(authorization_token)
+        if current_user == None:  # el token es valido
+            raise HTTPException(status_code=404, detail="No session found")
+        if current_user["status"] == 1:
+            flag = crud.delete_collection_by_id(db, id_collection=collection.id)
+            if flag:
+                return {"message": "collection deleted"}
+            raise HTTPException(status_code=404, detail="note not found")
+        raise HTTPException(status_code=403, detail="usuario no autorizado")
+    except Exception as e:
+        print(e)
         raise HTTPException(status_code=500, detail="Error in the server")
 
 
