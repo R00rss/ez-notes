@@ -60,6 +60,9 @@ def get_db():
     db = SessionLocal()
     try:
         yield db
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Error in the server")
     finally:
         db.close()
 

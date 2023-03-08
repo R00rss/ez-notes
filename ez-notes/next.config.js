@@ -10,8 +10,9 @@ const nextConfig = {
         // destination: "http://localhost:2000/api/:path*",
         // destination: "http://172.29.80.198:2000/api/:path*",
         destination: "http://172.19.10.101:2000/api/:path*",
+        // destination: "http://192.168.220.230:2000/api/:path*",
         // destination: "http://192.168.200.14:2000/api/:path*",
-        permanent: true,
+        permanent: false,
       },
     ];
   },
