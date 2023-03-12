@@ -1,1 +1,0 @@
-import home_icon from '@/assets/icons/sidebar/png/comments.png';
