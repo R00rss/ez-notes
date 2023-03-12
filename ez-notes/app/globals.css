@@ -15,6 +15,53 @@
   --quaternary-gray: #488197;
   --purple-300: #4e0258;
   --purple-400: #6c027c;
+  --cyan-100-50: #b0dee144;
+  --cyan-100: #b0dee1;
+  --cyan-200: #94dbe0;
+  --cyan-300: #6ed9e0;
+  --cyan-400: #39d1dc;
+  --cyan-500: #12d4e2;
+  --purple-000: #c100db4f;
+  --purple-500: #c100db;
+  --purple-600: #9900ad;
+  --purple-700: #790088;
+  --purple-800: #53005e;
+  --purple-900: #3b0043;
+  --purple-1000: #17001a;
+}
+
+.bg_gradient_cyan {
+  background: linear-gradient(
+    90deg,
+    var(--cyan-100-50),
+    var(--cyan-100),
+    var(--cyan-200),
+    var(--cyan-300),
+    var(--cyan-300),
+    var(--cyan-300),
+    var(--cyan-300),
+    var(--cyan-300),
+    var(--cyan-200),
+    var(--cyan-100),
+    var(--cyan-100-50)
+  );
+  /* background: linear-gradient(90deg, var(--cyan-100) 0%, var(--cyan-200) 100%); */
+}
+.bg_gradient_purple {
+  background: linear-gradient(
+    90deg,
+    var(--purple-700) 0%,
+    var(--purple-800) 100%
+  );
+  /* background: linear-gradient(
+    90deg,
+    var(--purple-000),
+    var(--purple-600),
+    var(--purple-600),
+    var(--purple-600),
+    var(--purple-600),
+    var(--purple-000)
+  ); */
 }
 
 *,

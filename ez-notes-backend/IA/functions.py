@@ -2,14 +2,14 @@ from tensorflow.keras.layers.experimental.preprocessing import StringLookup
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
-import os
+from os import path
 
 image_width = 128
 image_height = 32
 
-modeloPrecio = keras.models.load_model(
-    "C:\\Users\\capuz\\OneDrive\\Documentos\\NetBeansProjects\\ExamenIB\\src\\model\\handwritting.h5"
-)
+path_current_folder = path.dirname(path.realpath(__file__))
+model_path = path.join(path_current_folder, "model", "hand_writting.h5")
+hand_writing_model = keras.models.load_model(model_path)
 
 
 characters = [
@@ -90,6 +90,6 @@ def preprocess_image(image_path, img_size=(image_width, image_height)):
 
 def predict(image_path):
     image = preprocess_image(image_path)
-    prediction = modeloPrecio.predict(image)
+    prediction = hand_writing_model.predict(image)
     pred_texts = decode_batch_predictions(prediction)
     return pred_texts

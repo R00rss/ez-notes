@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 
 from . import models, schemas
+import database.schemas as schemasDB
 
 
 def get_user(db: Session, user_id: int):
@@ -61,6 +62,13 @@ def add_image(db: Session, image: schemas.ImageCreate):
     return db_image
 
 
+def delete_image(db: Session, id_image: int):
+    db_image = db.query(models.Image).filter(models.Image.id == id_image).first()
+    db.delete(db_image)
+    db.commit()
+    return db_image
+
+
 def create_user_collection(db: Session, item: schemas.CollectionCreate, user_id: int):
     db_item = models.Item(**item.dict(), user_id=user_id)
     db.add(db_item)
@@ -100,6 +108,10 @@ def update_collection(db: Session, collection: schemas.Collection):
     db.commit()
     db.refresh(db_collection)
     return db_collection
+
+
+def get_image_by_id(db: Session, id_image: int):
+    return db.query(models.Image).filter(models.Image.id == id_image).first()
 
 
 def get_notes_by_id_collection(

@@ -19,14 +19,19 @@ interface menu_item {
   alt: string;
   selected: boolean;
 }
+
 export interface SidebarMenuContextType {
   sidebar_menu: menu_item[];
+  selected_option: menu_item | null;
   set_sidebar_menu: Dispatch<SetStateAction<menu_item[]>>;
+  set_selected_option: Dispatch<SetStateAction<menu_item | null>>;
 }
 
 export const SidebarMenuContext = createContext<SidebarMenuContextType>({
   sidebar_menu: [],
   set_sidebar_menu: () => {},
+  selected_option: null,
+  set_selected_option: () => {},
 });
 
 const menu_items_default: menu_item[] = [
@@ -51,12 +56,20 @@ const menu_items_default: menu_item[] = [
 export default function ContainerSidebar({ children }: ContainerSidebarProps) {
   const [sidebar_menu, set_sidebar_menu] =
     useState<menu_item[]>(menu_items_default);
+  const [selected_option, set_selected_option] = useState<menu_item | null>(
+    null
+  );
   return (
-    <SidebarMenuContext.Provider value={{ sidebar_menu, set_sidebar_menu }}>
+    <SidebarMenuContext.Provider
+      value={{
+        sidebar_menu,
+        set_sidebar_menu,
+        selected_option,
+        set_selected_option,
+      }}
+    >
       <Sidebar />
       {children}
     </SidebarMenuContext.Provider>
   );
 }
-// const [menu_items, set_menu_items] =
-//     useState<menu_item[]>(menu_items_default);

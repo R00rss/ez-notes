@@ -2,6 +2,7 @@ import Footer from "@/components/footer/Footer";
 import JWT from "@/components/JWT/JWT";
 import ContainerSidebar from "@/components/sidebar/ContainerSidebar";
 import "../globals.css";
+import "@/styles/fonts.css";
 
 export default function layout_home({
   children,

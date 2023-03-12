@@ -6,7 +6,7 @@ export interface ImageCreate {
 
 export interface Image extends ImageCreate {
   id: number;
-  created_at: string;
-  updated_at: string;
+  created_at: Date;
+  updated_at: Date;
   status: number;
 }

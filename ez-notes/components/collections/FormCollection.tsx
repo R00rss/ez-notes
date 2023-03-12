@@ -32,7 +32,7 @@ export default function FormCollection({
     const payload = await addCollection(formData);
     if (payload) {
       simple_alert({
-        title: "success",
+        title: "Éxito",
         content: "Colección agregada",
         icon: "success",
       });
@@ -66,24 +66,25 @@ export default function FormCollection({
         </p>
       </header>
       <div className="font-light text-slate-700 text-lg py-2 flex flex-col justify-center items-center gap-3">
-        <label className=" flex flex-row items-center justify-between gap-4">
-          <p>Titulo:</p>
+      <label className="w-[min(90%,500px)] flex flex-row items-center gap-2">
+          <p className="text-left ">Titulo:</p>
           <input
-            className=" ml-2 border-2 border-gray-300 rounded-md"
+            className="border-[1px] border-gray-300 rounded-md w-full focus:outline-none outline-none px-2 py-[1px]"
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
+            required
           />
         </label>
         <button
-          className="duration-300 group rounded-xl bg-[var(--tertiary-color)] hover:bg-transparent border-2 hover:border-[var(--tertiary-color)] border-transparent px-2 shadow-[2px_2px_4px_1px_#b3b3b3]"
+          className="w-[min(240px,100%)] duration-300 group rounded-xl bg-[var(--primary-color)] hover:bg-transparent border-2 hover:border-[var(--primary-color)] border-transparent px-2 shadow-[2px_2px_4px_1px_#b3b3b3]"
           disabled={loading}
           type="submit"
         >
           <div
             className={`${loading ? "hidden" : "block"}  
-            text-slate-50 font-normal duration-300 group-hover:text-[var(--tertiary-color)]`}
+            text-slate-50 font-normal duration-300 group-hover:text-[var(--primary-color)]`}
           >
             Agregar colección
           </div>

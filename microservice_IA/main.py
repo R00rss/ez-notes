@@ -1,0 +1,71 @@
+from fastapi import FastAPI, File, UploadFile, Query, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
+import os
+from os import path
+import functions.IA as ml_functions
+
+
+origins = [
+    "*",
+    "http://localhost:2000",
+]
+
+API_KEY = "mysecretapikeyIA"
+
+project_path = path.dirname(path.realpath(__file__))
+
+
+async def validate_token_query(api_key: str = Query()):
+    if api_key != API_KEY:
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
+
+app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.post("/generate_text_by_image")
+async def generate_text_by_image(
+    api_key: None = Depends(validate_token_query),
+    image: UploadFile = File(...),
+):
+    try:
+        file_location = os.path.join(project_path, "uploads", image.filename)
+        with open(file_location, "wb") as file:
+            file.write(image.file.read())
+        res = ml_functions.my_predict(file_location)
+        print(res)
+        return {"text": res}
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/test")
+async def test(api_key: None = Depends(validate_token_query)):
+    return {"hello": "world"}
+
+
+@app.get("/test2")
+async def test2():
+    # path_to_img = os.path.join(project_path, "uploads", "test.png")
+    # ml_functions.predict()
+    return {"hello": "world"}
+
+
+if __name__ == "__main__":
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        reload=True,
+        port=2001,
+    )

@@ -13,11 +13,15 @@ class credentials(BaseModel):
     password: str
 
 
-class UserToken(BaseModel):
+class User(BaseModel):
     id: int
     name: str
     username: str
-    password: str
+    image_path: str
     status: int
     user_type: int
     exp: int
+
+
+class UserToken(User):
+    password: str

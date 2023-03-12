@@ -6,7 +6,7 @@ export async function addNote(
   token: String | null = get_token()
 ) {
   if (!token) return null;
-  const res = await fetch("/api/note", {
+  const res = await fetch(`${process.env.API_URL}/api/note`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export async function update_note(
   token: String | null = get_token()
 ) {
   if (!token) return null;
-  const res = await fetch("/api/note", {
+  const res = await fetch(`${process.env.API_URL}/api/note`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export async function delete_note(
   token: String | null = get_token()
 ) {
   if (!token) return null;
-  const res = await fetch("/api/note", {
+  const res = await fetch(`${process.env.API_URL}/api/note`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export async function getNotes(
   token: String | null = get_token()
 ) {
   if (!token) return null;
-  const res = await fetch(`/api/notes?id_collection=${id_collection}`, {
+  const res = await fetch(`${process.env.API_URL}/api/notes?id_collection=${id_collection}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

@@ -6,6 +6,7 @@ interface Props {
 }
 
 export default function NoteCard({ Note }: Props) {
+  console.log(Note)
   const { updated_at } = Note;
   const { day, time } = format_date(updated_at);
   return (

@@ -1,0 +1,136 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[3].oneOf[7].use[2]!./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[3].oneOf[7].use[3]!./app/(Login)/login/Login.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Login_container_login__rTUS3 {
+  /* transform: rotate3d(1, 1, 1, 10deg); */
+  animation: Login_change-box-shadow-color___WkxN 10s ease infinite;
+}
+.Login_bg_img_login_card__T_4j0 {
+  background-image: linear-gradient(
+      to bottom,
+      #f5f6fc12,
+      var(--primary-color-85),
+      var(--tertiary-color-85)
+    ),
+    url(/_next/static/media/bg-login3.8f7bebdd.png);
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Login_login_container_animation__Q25Vp {
+  animation: Login_login-container-animation__t3oEW 2s ease-in-out,
+    Login_changing-color-shadow__FYSan 2s ease-in-out infinite;
+  /* transition: 1s all; */
+  border: 1px solid rgba(0, 255, 255, 0.616);
+  position: relative;
+}
+@keyframes Login_changing-color-shadow__FYSan {
+  25% {
+    box-shadow: 0px 0px 15px 0px rgb(37, 164, 196);
+  }
+  50% {
+    box-shadow: 0px 0px 15px 0px rgb(37, 111, 196);
+  }
+  75% {
+    box-shadow: 0px 0px 15px 0px rgb(37, 164, 196);
+  }
+  0%,
+  100% {
+    box-shadow: 0px 0px 15px 0px rgb(37, 196, 188);
+  }
+}
+@keyframes Login_login-container-animation__t3oEW {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  20% {
+    max-height: min(100px, 30%);
+    border: 0.4px solid cyan;
+    width: min(90px, 60%);
+    opacity: 0.1;
+  }
+
+  30% {
+    width: min(200px, 60%);
+    max-height: min(300px, 30%);
+    border: 1px solid rgba(0, 255, 255, 0.281);
+    opacity: 0;
+    padding: 0.4;
+  }
+
+  70% {
+    opacity: 0.8;
+    width: min(300px, 60%);
+    max-height: min(400px, 40%);
+    border: 1px solid rgba(0, 255, 255, 0.616);
+  }
+  100% {
+    opacity: 1;
+    width: min(500px, 80%);
+    max-height: min(700px, 90%);
+    border: 0.4px solid rgba(0, 255, 255, 0.068);
+  }
+}
+
+@keyframes Login_change-box-shadow-color___WkxN {
+  0%,
+  33.33% {
+    box-shadow: 0px 0px 10px 5px var(--primary-color-85);
+  }
+  33.33%,
+  66.66% {
+    box-shadow: 0px 0px 10px 5px var(--secondary-color-85);
+  }
+  66.66%,
+  100% {
+    box-shadow: 0px 0px 10px 5px var(--tertiary-color-85);
+  }
+  100% {
+    box-shadow: 0px 0px 10px 5px var(--primary-color-85);
+  }
+}
+.Login_wave__ZpJyM {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg");
+  height: 100%;
+  width: 6400px;
+}
+.Login_wave1__7aVF8 {
+  position: absolute;
+  top: 0px;
+  opacity: 0.4;
+}
+.Login_wave2__SON_i {
+  opacity: 0.9;
+  position: absolute;
+  top: 0px;
+}
+.Login_animation_move_x__GRPI5 {
+  animation: Login_wave__ZpJyM 8s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+.Login_animation_move_x2__rTzsu {
+  animation: Login_wave__ZpJyM 16s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes Login_wave__ZpJyM {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -1600px;
+  }
+}
+
+@keyframes Login_swell__qU6F0 {
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+

@@ -1,0 +1,153 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[3].oneOf[7].use[2]!./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[3].oneOf[7].use[3]!./components/modals/Modal.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Modal_modal_overlay__fhvKE {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: min(50px, 5%);
+}
+
+.Modal_modal_content__xtXvI {
+  /* background-color: #fdffff; */
+  /* background-color: #4e0258; */
+  /* background-color: var(--tertiary-color); */
+  width: min(90%, 800px);
+  /* padding: 0px; */
+  /* border-radius: 5px; */
+  position: relative;
+}
+
+.Modal_modal_close__qvGuP {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  padding: 6px;
+  filter: brightness(0) invert(1);
+  background-color: #dc2626;
+  border: 1px #dc2626 solid;
+  cursor: pointer;
+}
+
+.Modal_modal_body__Bo4fr {
+  /* padding: 10px; */
+  /* margin-top: 20px; */
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[3].oneOf[7].use[2]!./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[3].oneOf[7].use[3]!./components/collections/Collections.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Collections_gradient_text__vObMp {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--tertiary-color)
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[3].oneOf[7].use[2]!./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[3].oneOf[7].use[3]!./components/sidebar/Sidebar.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Sidebar_bg_sidebar__Au_qb {
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-gray),
+    var(--secondary-gray),
+    var(--tertiary-gray),
+    var(--quaternary-gray)
+  );
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: var(--secondary-color-85); */
+}
+.Sidebar_text_menu_1__QltV1 {
+  background-image: linear-gradient(
+    to right,
+    #8c0069 0%,
+    #e2c0da 80%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.Sidebar_menu_item__tFHAh {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 0.75rem /* 12px */;
+  padding-bottom: 0.75rem /* 12px */;
+  padding-left: 0.5rem /* 8px */;
+  padding-right: 0.5rem /* 8px */;
+  border-radius: 0.75rem /* 12px */;
+  color: #e2e3ea;
+}
+.Sidebar_selected_menu_item__iBej8 {
+  background-color: transparent;
+  border-top-left-radius: 0.75rem /* 12px */;
+  border-bottom-left-radius: 0.75rem /* 12px */;
+  color: #1e293b;
+}
+.Sidebar_before_selected_menu_item__OfGr6 {
+  background-color: #4e0258;
+  border-top-left-radius: 0.75rem /* 12px */;
+  border-bottom-left-radius: 0.75rem /* 12px */;
+}
+.Sidebar_after_selected_menu_item__3mN8C {
+  background-color: #4e0258;
+  border-radius: 1rem /* 16px */;
+  border-top-right-radius: 0px;
+}
+.Sidebar_disappear_button__3S4ED {
+  animation: Sidebar_disappear_button__3S4ED 200ms ease-in-out;
+  width: 0px;
+  opacity: 0;
+}
+.Sidebar_appear_button__NWNNJ {
+  animation: Sidebar_appear_button__NWNNJ 350ms ease-in-out;
+  width: auto;
+  opacity: 1;
+}
+
+@keyframes Sidebar_disappear_button__3S4ED {
+  0% {
+    opacity: 1;
+    width: auto;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+  }
+}
+@keyframes Sidebar_appear_button__NWNNJ {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  100% {
+    opacity: 1;
+    width: auto;
+  }
+}
+

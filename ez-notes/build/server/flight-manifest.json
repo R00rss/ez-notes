@@ -1,0 +1,1609 @@
+{
+  "__ssr_module_mapping__": {
+    "(app-client)/./assets/icons/collections/bullet.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/collections/bullet.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/collections/bullet.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/collections/bullet.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/collections/layer-plus.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/collections/layer-plus.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/collections/layer-plus.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/collections/layer-plus.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/interface/IA/ia3.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/interface/IA/ia3.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/interface/IA/ia3.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/interface/IA/ia3.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/interface/back6.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/interface/back6.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/interface/back6.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/interface/back6.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/interface/cross2.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/interface/cross2.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/interface/cross2.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/interface/cross2.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/interface/edit3.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/interface/edit3.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/interface/edit3.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/interface/edit3.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/interface/eye2.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/interface/eye2.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/interface/eye2.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/interface/eye2.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/interface/loading1.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/interface/loading1.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/interface/loading1.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/interface/loading1.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/interface/undo8.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/interface/undo8.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/interface/undo8.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/interface/undo8.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/interface/upload.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/interface/upload.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/interface/upload.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/interface/upload.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/comments.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/comments.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/comments.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/comments.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/cross.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/cross.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/cross.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/cross.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/door-open.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/door-open.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/door-open.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/door-open.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/house.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/house.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/house.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/house.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/info.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/info.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/info.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/info.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/menu-burger.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/menu-burger.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/menu-burger.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/menu-burger.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/minus.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/minus.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/minus.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/minus.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/settings.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/settings.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/settings.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/settings.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/icons/sidebar/png/users.png": {
+      "": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/users.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/users.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/icons/sidebar/png/users.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./assets/images/sidebar/usuario1.png": {
+      "": {
+        "id": "(sc_client)/./assets/images/sidebar/usuario1.png",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./assets/images/sidebar/usuario1.png",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./assets/images/sidebar/usuario1.png",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(home)/page.tsx": {
+      "": {
+        "id": "(sc_client)/./app/(home)/page.tsx",
+        "name": "",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./app/(home)/page.tsx",
+        "name": "*",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/(home)/page.tsx",
+        "name": "default",
+        "chunks": [
+          "app/(home)/page:app/(home)/page"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./components/JWT/JWT.tsx": {
+      "": {
+        "id": "(sc_client)/./components/JWT/JWT.tsx",
+        "name": "",
+        "chunks": [
+          "app/(home)/layout:app/(home)/layout"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./components/JWT/JWT.tsx",
+        "name": "*",
+        "chunks": [
+          "app/(home)/layout:app/(home)/layout"
+        ],
+        "async": false
+      },
+      "JWTContext": {
+        "id": "(sc_client)/./components/JWT/JWT.tsx",
+        "name": "JWTContext",
+        "chunks": [
+          "app/(home)/layout:app/(home)/layout"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./components/JWT/JWT.tsx",
+        "name": "default",
+        "chunks": [
+          "app/(home)/layout:app/(home)/layout"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js": {
+      "": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js": {
+      "": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js": {
+      "": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js": {
+      "": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "*",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "default",
+        "chunks": [
+          "app-client-internals:app-client-internals"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(Login)/login/page.tsx": {
+      "": {
+        "id": "(sc_client)/./app/(Login)/login/page.tsx",
+        "name": "",
+        "chunks": [
+          "app/(Login)/login/page:app/(Login)/login/page"
+        ],
+        "async": false
+      },
+      "*": {
+        "id": "(sc_client)/./app/(Login)/login/page.tsx",
+        "name": "*",
+        "chunks": [
+          "app/(Login)/login/page:app/(Login)/login/page"
+        ],
+        "async": false
+      },
+      "default": {
+        "id": "(sc_client)/./app/(Login)/login/page.tsx",
+        "name": "default",
+        "chunks": [
+          "app/(Login)/login/page:app/(Login)/login/page"
+        ],
+        "async": false
+      }
+    }
+  },
+  "__edge_ssr_module_mapping__": {},
+  "__entry_css_files__": {
+    "/home/ron/projects/ez-notes/ez-notes/app/(home)/page": [
+      "static/css/app/(home)/page.css"
+    ],
+    "/home/ron/projects/ez-notes/ez-notes/app/(Login)/login/page": [
+      "static/css/app/(Login)/login/page.css"
+    ],
+    "/home/ron/projects/ez-notes/ez-notes/app/(Login)/layout": [
+      "static/css/_app-client_styles_fonts_css.css",
+      "static/css/_app-client_app_globals_css.css"
+    ],
+    "/home/ron/projects/ez-notes/ez-notes/app/(home)/layout": [
+      "static/css/_app-client_styles_fonts_css.css",
+      "static/css/_app-client_app_globals_css.css",
+      "static/css/_app-client_components_footer_Footer_module_css.css"
+    ]
+  },
+  "/home/ron/projects/ez-notes/ez-notes/components/collections/Collections.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/(home)/page.css"
+      ]
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/components/modals/Modal.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/(home)/page.css"
+      ]
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/components/sidebar/Sidebar.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/(home)/page.css"
+      ]
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/collections/bullet.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/collections/bullet.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/collections/bullet.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/collections/bullet.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/collections/layer-plus.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/collections/layer-plus.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/collections/layer-plus.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/collections/layer-plus.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/interface/IA/ia3.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/interface/IA/ia3.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/interface/IA/ia3.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/interface/IA/ia3.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/interface/back6.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/interface/back6.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/interface/back6.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/interface/back6.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/interface/cross2.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/interface/cross2.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/interface/cross2.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/interface/cross2.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/interface/edit3.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/interface/edit3.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/interface/edit3.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/interface/edit3.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/interface/eye2.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/interface/eye2.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/interface/eye2.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/interface/eye2.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/interface/loading1.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/interface/loading1.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/interface/loading1.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/interface/loading1.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/interface/undo8.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/interface/undo8.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/interface/undo8.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/interface/undo8.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/interface/upload.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/interface/upload.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/interface/upload.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/interface/upload.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/comments.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/comments.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/comments.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/comments.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/cross.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/cross.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/cross.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/cross.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/door-open.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/door-open.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/door-open.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/door-open.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/house.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/house.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/house.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/house.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/info.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/info.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/info.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/info.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/menu-burger.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/menu-burger.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/menu-burger.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/menu-burger.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/minus.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/minus.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/minus.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/minus.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/settings.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/settings.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/settings.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/settings.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/icons/sidebar/png/users.png": {
+    "": {
+      "id": "(app-client)/./assets/icons/sidebar/png/users.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/icons/sidebar/png/users.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/icons/sidebar/png/users.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/assets/images/sidebar/usuario1.png": {
+    "": {
+      "id": "(app-client)/./assets/images/sidebar/usuario1.png",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./assets/images/sidebar/usuario1.png",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./assets/images/sidebar/usuario1.png",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/app/(home)/page.tsx": {
+    "": {
+      "id": "(app-client)/./app/(home)/page.tsx",
+      "name": "",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./app/(home)/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./app/(home)/page.tsx",
+      "name": "default",
+      "chunks": [
+        "app/(home)/page:app/(home)/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/components/JWT/JWT.tsx": {
+    "": {
+      "id": "(app-client)/./components/JWT/JWT.tsx",
+      "name": "",
+      "chunks": [
+        "app/(home)/layout:app/(home)/layout"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./components/JWT/JWT.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(home)/layout:app/(home)/layout"
+      ],
+      "async": false
+    },
+    "JWTContext": {
+      "id": "(app-client)/./components/JWT/JWT.tsx",
+      "name": "JWTContext",
+      "chunks": [
+        "app/(home)/layout:app/(home)/layout"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./components/JWT/JWT.tsx",
+      "name": "default",
+      "chunks": [
+        "app/(home)/layout:app/(home)/layout"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js": {
+    "": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/esm/client/components/app-router.js": {
+    "": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/app-router.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js": {
+    "": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/esm/client/components/error-boundary.js": {
+    "": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/error-boundary.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js": {
+    "": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/esm/client/components/layout-router.js": {
+    "": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/layout-router.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js": {
+    "": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/esm/client/components/render-from-template-context.js": {
+    "": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./node_modules/.pnpm/next@13.1.6_biqbaboplfbrettd7655fr4n2y/node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "default",
+      "chunks": [
+        "app-client-internals:app-client-internals"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/app/(Login)/login/Login.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/(Login)/login/page.css"
+      ]
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/app/(Login)/login/page.tsx": {
+    "": {
+      "id": "(app-client)/./app/(Login)/login/page.tsx",
+      "name": "",
+      "chunks": [
+        "app/(Login)/login/page:app/(Login)/login/page"
+      ],
+      "async": false
+    },
+    "*": {
+      "id": "(app-client)/./app/(Login)/login/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/(Login)/login/page:app/(Login)/login/page"
+      ],
+      "async": false
+    },
+    "default": {
+      "id": "(app-client)/./app/(Login)/login/page.tsx",
+      "name": "default",
+      "chunks": [
+        "app/(Login)/login/page:app/(Login)/login/page"
+      ],
+      "async": false
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/app/globals.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_app_globals_css.css"
+      ]
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/styles/fonts.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_styles_fonts_css.css"
+      ]
+    }
+  },
+  "/home/ron/projects/ez-notes/ez-notes/components/footer/Footer.module.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_components_footer_Footer_module_css.css"
+      ]
+    }
+  }
+}

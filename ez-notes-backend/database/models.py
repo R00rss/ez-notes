@@ -10,6 +10,7 @@ class User(Base):
     name = Column(String, index=True)
     username = Column(String, unique=True, index=True)
     password = Column(String, unique=True, index=True)
+    image_path = Column(String, index=True, default="")
     created_at = Column(DateTime, index=True, default=datetime.now)
     updated_at = Column(DateTime, default=datetime.now, onupdate=datetime.now)
     status = Column(Integer, index=True, default=1)

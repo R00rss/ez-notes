@@ -71,7 +71,7 @@ export default function ImageForm({
     console.log(payload);
     if (payload) {
       simple_alert({
-        title: "Exito",
+        title: "Éxito",
         content: "Imagen agregada correctamente.",
         icon: "success",
       });
@@ -111,13 +111,13 @@ export default function ImageForm({
         </label>
 
         <button
-          className="duration-300 group rounded-xl bg-[var(--tertiary-color)] hover:bg-transparent border-2 hover:border-[var(--tertiary-color)] border-transparent px-2 shadow-[2px_2px_4px_1px_#b3b3b3]"
+          className="w-[min(240px,100%)] duration-300 group rounded-xl bg-[var(--primary-color)] hover:bg-transparent border-2 hover:border-[var(--primary-color)] border-transparent px-2 shadow-[2px_2px_4px_1px_#b3b3b3]"
           disabled={loading}
           type="submit"
         >
           <div
             className={`${loading ? "hidden" : "block"}  
-            text-slate-50 font-normal duration-300 group-hover:text-[var(--tertiary-color)]`}
+            text-slate-50 font-normal duration-300 group-hover:text-[var(--primary-color)]`}
           >
             Agregar Imagen
           </div>

@@ -44,21 +44,21 @@ export default function CollectionCard({
 
   function handle_delete() {
     alert_with_callback({
-      title: "Eliminar nota",
+      title: "Eliminar Colección",
       content: "¿Estás seguro de eliminar esta colección?",
       icon: "warning",
       callback: () => {
         delete_collection(collection).then(async (data) => {
           if (data) {
             simple_alert({
-              title: "Nota eliminada",
+              title: "Colección eliminada",
               content: "La nota se eliminó correctamente",
               icon: "success",
             });
           } else {
             simple_alert({
               title: "Error",
-              content: "No se pudo eliminar la nota",
+              content: "No se pudo eliminar la Colección",
               icon: "error",
             });
           }
@@ -66,8 +66,8 @@ export default function CollectionCard({
         });
       },
       showCancelButton: true,
-      cancelButtonText: "Cancel",
-      confirmButtonText: "Delete",
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Eliminar",
     });
   }
   function handle_save() {

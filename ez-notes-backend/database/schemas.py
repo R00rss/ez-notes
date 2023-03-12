@@ -82,8 +82,8 @@ class User(UserBase):
     updated_at: datetime
     status: int
     user_type: int
+    image_path: str
     collections: list[Collection] = []
-    # collections: list[Collection] = []
 
     class Config:
         orm_mode = True

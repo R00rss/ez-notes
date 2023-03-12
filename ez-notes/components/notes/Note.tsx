@@ -10,6 +10,7 @@ import { alert_with_callback, simple_alert } from "@/components/alerts/main";
 import { delete_note, getNotes, update_note } from "@/services/Notes";
 import { useEffect, useState } from "react";
 import ImageForm from "../images/ImageForm";
+import ImagesContainer from "../images/ImagesContainer";
 interface Props {
   note: Note;
   update_data_total: Function;
@@ -79,8 +80,8 @@ export default function NoteCard({
         });
       },
       showCancelButton: true,
-      cancelButtonText: "Cancel",
-      confirmButtonText: "Delete",
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Eliminar",
     });
   }
   function handle_save() {
@@ -234,11 +235,17 @@ export default function NoteCard({
         ></textarea>
       </div>
       <Modal isOpen={is_modal_upload_open} onClose={handleCloseModal}>
-        <ImageForm
-          id_note={note.id}
+        <ImagesContainer
+          note={note}
           update_data_total={update_data_total}
           close={handleCloseModal}
         />
+
+        {/* <ImageForm
+          id_note={note.id}
+          update_data_total={update_data_total}
+          close={handleCloseModal}
+        /> */}
       </Modal>
     </div>
   );

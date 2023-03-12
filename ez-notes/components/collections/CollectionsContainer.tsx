@@ -90,32 +90,33 @@ export default function CollectionsContainer() {
 
   return (
     <div className="px-3 md:px-5 pt-4">
-      <div className="flex justify-between items-center mb-2">
-        {!selected_collection && (
-          <h1 className={`${styles.gradient_text} text-3xl`}>
-            Colecciones:{" "}
-            <span className="text-slate-700">{collections.length}</span>
-          </h1>
-        )}
-        {selected_collection && (
-          <h1 className={`${styles.gradient_text} text-3xl`}>
-            Notas{" "}
-            <span className={`text-slate-700`}>{selected_collection.name}</span>
-          </h1>
-        )}
-        {selected_collection && (
-          <button
-            onClick={handle_go_back}
-            className=" bg-[var(--tertiary-color)] border-2 border-transparent group hover:border-[var(--tertiary-color)] hover:bg-transparent hover:bg-[#4e0258] rounded-md h-12 w-12 p-2"
-          >
-            <Image
-              className="filter invert-[0.2] hue-rotate-[10deg] group-hover:hue-rotate-[50deg]"
-              src={back_icon}
-              alt="exit_icon"
-            />
-          </button>
-        )}
+      <div className="mb-2 rounded-xl bg-[#fdffff] py-1  shadow-[-3px_3px_3px_2px_#c0c2c2] duration-[400ms] w-64 flex justify-center items-center">
+        <div className={`${styles.gradient_text} text-2xl flex flex-row gap-2`}>
+          {selected_collection! ? (
+            <>
+              <h1>Notas</h1>
+              <span>{selected_collection.name}</span>
+            </>
+          ) : (
+            <>
+              <h1>Colecciones:</h1>
+              <span>{collections.length}</span>
+            </>
+          )}
+        </div>
       </div>
+      {selected_collection && (
+        <button
+          onClick={handle_go_back}
+          className="absolute top-2 right-2 bg-[var(--tertiary-color)] border-2 border-transparent group hover:border-[var(--tertiary-color)] hover:bg-transparent hover:bg-[#4e0258] rounded-md h-12 w-12 p-2"
+        >
+          <Image
+            className="filter invert-[0.2] hue-rotate-[10deg] group-hover:hue-rotate-[50deg]"
+            src={back_icon}
+            alt="exit_icon"
+          />
+        </button>
+      )}
       {!selected_collection && (
         <section
           className={`grid ${
@@ -154,7 +155,7 @@ export default function CollectionsContainer() {
           })}
         </section>
       )}
-      <section
+      <button
         onClick={selected_collection ? handleOpenModalNote : handleOpenModal}
         className="absolute bottom-12 mt-2 group w-14 h-14  lg:w-16 2xl:h-16 cursor-pointer rounded-xl bg-[#fdffff] py-2 px-3 shadow-[-3px_3px_3px_2px_#c0c2c2] duration-[400ms] flex justify-center items-center bg-[var(--purple-300)] hover:bg-[var(--tertiary-color)]"
       >
@@ -163,7 +164,7 @@ export default function CollectionsContainer() {
           src={icon_add_collection}
           alt="icon add collection"
         />
-      </section>
+      </button>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         <FormCollection
           updateCollections={(new_data: Collection[]) =>

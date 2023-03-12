@@ -9,6 +9,9 @@ import {
 } from "@/components/alerts/main";
 import style from "./Login.module.css";
 import { remove_token, set_token } from "@/functions/globals";
+
+import { send_credentials } from "@/services/User";
+
 interface credentials_to_send {
   username: string;
   password: string;
@@ -46,17 +49,6 @@ export default function Login() {
       }
     }
   }, [cursor_pos]);
-
-  async function send_credentials(credentials: credentials_to_send) {
-    // return await fetch("http://localhost:2000/api/login", {
-    return await fetch("/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(credentials),
-    });
-  }
   async function handle_login(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!e.currentTarget.checkValidity() || !credentials)
@@ -66,7 +58,7 @@ export default function Login() {
         icon: "error",
       });
 
-    const res = await send_credentials(credentials as credentials_to_send);
+    const res = await send_credentials(credentials);
     if (res.status === 200) {
       const data = await res.json();
       const current_token = data.token;
@@ -145,7 +137,7 @@ export default function Login() {
         className={`${style.container_login} ${style.login_container_animation} bg-slate-900/80 w-[min(500px,80%)] aspect-[9/16] max-h-[min(700px,90%)] justify-evenly flex flex-col items-center rounded-2xl relative`}
       >
         <h1 className="text-[clamp(20px,10vw,60px)] font-extralight italic text-[#e8fffc]">
-          EZ notes
+          Login
         </h1>
         <section className="text-[#e8fffc] flex justify-center items-center flex-col bg-gradient-to-b bg-[#00000000] w-[min(450px,100%)] rounded-xl gap-6">
           {/* <h1 className="text-[clamp(13px,7vw,40px)] font-extralight">

@@ -1,33 +1,53 @@
 "use client";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { get_token } from "@/functions/globals";
+import { UserBase } from "@/types/user";
+import { get_user_img, validate_session } from "@/services/User";
+
+// context for token
+// interface JWTContextType {
+//   token: string;
+//   set_token: (token: string) => void;
+// }
+// export const JWTContext = createContext<JWTContextType>({
+//   token: "",
+//   set_token: () => {},
+// });
+
+interface JWTContextType {
+  user_info: UserBase | null;
+  user_image: string | null;
+  set_user_info: (user_info: UserBase | null) => void;
+}
+export const JWTContext = createContext<JWTContextType>({
+  user_info: null,
+  user_image: null,
+  set_user_info: () => {},
+});
 
 export default function JWT({ children }: { children: React.ReactNode }) {
   const router = useRouter();
+  const [user_info, set_user_info] = useState<UserBase | null>(null);
+  const [user_image, set_user_image] = useState<null | string>(null);
   const [flag_session, set_flag_session] = useState<Boolean | null>(null);
-  async function validate_sesion() {
-    const current_token = get_token();
-    const response = await fetch("/api/validate_session", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${current_token}`,
-      },
-      body: JSON.stringify({ current_token }),
-    });
-    console.log(response);
-    if (response.status === 200) {
-      set_flag_session(true);
-      console.log("session valid");
-    } else {
-      console.log("session invalid");
-      set_flag_session(false);
-    }
-  }
 
   useEffect(() => {
-    validate_sesion();
+    validate_session().then((data) => {
+      if (data) {
+        get_user_img().then((blob) => {
+          if (!blob) return;
+          const image_src = URL.createObjectURL(blob);
+          set_user_image(image_src);
+        });
+        set_user_info(data);
+        set_flag_session(true);
+        console.log("session valid");
+      } else {
+        console.log("session invalid");
+        set_flag_session(false);
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -37,5 +57,9 @@ export default function JWT({ children }: { children: React.ReactNode }) {
 
   if (flag_session === null) return <div>Loading...</div>;
   if (!flag_session) return <div>Redirecting...</div>;
-  return <>{children}</>;
+  return (
+    <JWTContext.Provider value={{ user_info, user_image, set_user_info }}>
+      {children}
+    </JWTContext.Provider>
+  );
 }
